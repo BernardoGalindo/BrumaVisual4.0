@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruma Visual - Adventure & Photography</title>
+
+    <!-- Google Fonts: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Your Custom Stylesheet -->
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Bruma Visual</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="workshop.html">The Workshop</a></li>
+                    <li><a href="contact.html" class="button">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="site-content">
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Explore the Unseen. A Journey South America.</h1>
+                <a href="la-guajira-expedition.html" class="button">Follow the La Guajira Expedition</a>
+            </div>
+        </section>
+
+        <section class="latest-dispatches">
+            <h2>From the Logbook</h2>
+            <div class="dispatches-grid">
+                <div class="dispatch-card">
+                    <img src="./Portafolio Images/placeholder1.jpg" alt="Dispatch 1">
+                    <h3>Post Title 1</h3>
+                    <a href="#">Read the Story...</a>
+                </div>
+                <div class="dispatch-card">
+                    <img src="Images/placeholder2.jpg" alt="Dispatch 2">
+                    <h3>Post Title 2</h3>
+                    <a href="#">Read the Story...</a>
+                </div>
+                <div class="dispatch-card">
+                    <img src="Images/placeholder3.jpg" alt="Dispatch 3">
+                    <h3>Post Title 3</h3>
+                    <a href="#">Read the Story...</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-preview">
+            <h2>A Glimpse of the Journey</h2>
+            <div class="masonry-grid">
+                <div class="masonry-item"><img src="Images/placeholder4.jpg" alt="Gallery Image 1"></div>
+                <div class="masonry-item"><img src="Images/placeholder5.jpg" alt="Gallery Image 2"></div>
+                <div class="masonry-item"><img src="Images/placeholder6.jpg" alt="Gallery Image 3"></div>
+                <div class="masonry-item"><img src="Images/placeholder7.jpg" alt="Gallery Image 4"></div>
+                <div class="masonry-item"><img src="Images/placeholder8.jpg" alt="Gallery Image 5"></div>
+                <div class="masonry-item"><img src="./Portafolio Images/placeholder9.jpg" alt="Gallery Image 6"></div>
+            </div>
+        </section>
+
+        <section class="core-pillars">
+            <a href="#" class="pillar">
+                <h3>Watch the Journey</h3>
+            </a>
+            <a href="work-with-me.html" class="pillar">
+                <h3>Work With Me</h3>
+            </a>
+            <a href="portfolio.html" class="pillar">
+                <h3>Explore Past Expeditions</h3>
+            </a>
+        </section>
+
+    </main> <!-- End of Site Content Wrapper -->
+
+    <footer>
+        <p>&copy; 2025 Bruma Visual.</p>
+        <div class="social-links">
+            <a href="#">IG</a>
+            <a href="#">YT</a>
+        </div>
+    </footer>
+
+    <script>
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        mobileNavToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
