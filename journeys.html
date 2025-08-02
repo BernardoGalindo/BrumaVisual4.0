@@ -1,27 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruma Visual - Journeys</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Fonts: Montserrat & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <style>
-        .interactive-map-placeholder {
-            height: 500px;
-            background-color: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: #666;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Your Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="page-header">
+    <header class="sticky-header">
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <div class="header-container">
             <a href="index.html" class="logo">Bruma Visual</a>
@@ -38,7 +31,7 @@
         </div>
     </header>
 
-    <main id="main-content">
+    <main class="site-content" id="main-content">
         <section class="content-section">
             <h2>Explore Our Expeditions</h2>
             <p>This page will feature an interactive map showcasing all our past and ongoing expeditions. Click on a pin to learn more about each journey!</p>
@@ -55,5 +48,7 @@
             <a href="#">YT</a>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
