@@ -14,25 +14,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Your Custom Stylesheet -->
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="sticky-header"></header>
-                    <li><a href="workshop.html">The Workshop</a></li>
-                    <li><a href="contact.html" class="button">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-nav-toggle">&#9776;</button>
-        </div>
-    </header>
 
     <!-- Main Content Wrapper -->
     <main class="site-content">
 
         <section class="hero-section video-hero">
             <video autoplay muted loop playsinline class="hero-video">
-                <source src="./Videos/hero-video.mp4" type="video/mp4">
+                <source src="videos/hero-video.mp4" type="video/mp4">
                 <!-- Add other video formats for broader browser support if needed -->
                 Your browser does not support the video tag.
             </video>
@@ -46,17 +39,17 @@
             <h2>From the Logbook</h2>
             <div class="dispatches-grid">
                 <div class="dispatch-card">
-                    <img src="Images/placeholder1.jpg" alt="Dispatch 1">
+                    <img src="images/placeholder1.jpg" alt="Dispatch 1">
                     <h3>Post Title 1</h3>
                     <a href="#">Read the Story...</a>
                 </div>
                 <div class="dispatch-card">
-                    <img src="Images/placeholder2.jpg" alt="Dispatch 2">
+                    <img src="images/placeholder2.jpg" alt="Dispatch 2">
                     <h3>Post Title 2</h3>
                     <a href="#">Read the Story...</a>
                 </div>
                 <div class="dispatch-card">
-                    <img src="Images/placeholder3.jpg" alt="Dispatch 3">
+                    <img src="images/placeholder3.jpg" alt="Dispatch 3">
                     <h3>Post Title 3</h3>
                     <a href="#">Read the Story...</a>
                 </div>
@@ -66,12 +59,12 @@
         <section class="gallery-preview">
             <h2>A Glimpse of the Journey</h2>
             <div class="masonry-grid">
-                <div class="masonry-item"><img src="Images/placeholder4.jpg" alt="Gallery Image 1"></div>
-                <div class="masonry-item"><img src="Images/placeholder5.jpg" alt="Gallery Image 2"></div>
-                <div class="masonry-item"><img src="Images/placeholder6.jpg" alt="Gallery Image 3"></div>
-                <div class="masonry-item"><img src="Images/placeholder7.jpg" alt="Gallery Image 4"></div>
-                <div class="masonry-item"><img src="Images/placeholder8.jpg" alt="Gallery Image 5"></div>
-                <div class="masonry-item"><img src="Images/placeholder9.jpg" alt="Gallery Image 6"></div>
+                <div class="masonry-item"><img src="images/placeholder4.jpg" alt="Gallery Image 1"></div>
+                <div class="masonry-item"><img src="images/placeholder5.jpg" alt="Gallery Image 2"></div>
+                <div class="masonry-item"><img src="images/placeholder6.jpg" alt="Gallery Image 3"></div>
+                <div class="masonry-item"><img src="images/placeholder7.jpg" alt="Gallery Image 4"></div>
+                <div class="masonry-item"><img src="images/placeholder8.jpg" alt="Gallery Image 5"></div>
+                <div class="masonry-item"><img src="images/placeholder9.jpg" alt="Gallery Image 6"></div>
             </div>
         </section>
 
@@ -89,22 +82,9 @@
 
     </main> <!-- End of Site Content Wrapper -->
 
-    <footer>
-        <p>&copy; 2025 Bruma Visual.</p>
-        <div class="social-links">
-            <a href="#">IG</a>
-            <a href="#">YT</a>
-        </div>
-    </footer>
+    <footer></footer>
 
-    <script>
-        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-        const mainNav = document.querySelector('.main-nav');
-
-        mobileNavToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-        });
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
