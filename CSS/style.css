@@ -279,6 +279,9 @@ footer {
 }
 footer .social-links {
     margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
 footer .social-links a {
     color: #fff;
@@ -290,6 +293,56 @@ footer .social-links a {
 }
 footer .social-links a:hover {
     color: var(--color-accent-primary);
+}
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #222;
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.2s;
+    text-decoration: none;
+}
+.social-btn:hover,
+.social-btn:focus {
+    background: #0077ff;
+    transform: scale(1.1);
+    color: #fff;
+}
+.social-btn:active {
+    background: #005bb5;
+}
+
+/* General Button Styles */
+.button, .cta-button, .pillar {
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.button:hover, .cta-button:hover, .pillar:hover,
+.button:focus, .cta-button:focus, .pillar:focus {
+    background: #0077ff;
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+}
+.button:active, .cta-button:active, .pillar:active {
+    background: #005bb5;
+    color: #fff;
+}
+
+/* Interactive Map Placeholder */
+.interactive-map-placeholder {
+    height: 500px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #666;
+    border-radius: 10px;
+    margin: 2rem 0;
 }
 
 /* Responsive tweaks */
