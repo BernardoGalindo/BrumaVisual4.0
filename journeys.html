@@ -4,32 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruma Visual - Journeys</title>
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .interactive-map-placeholder {
+            height: 500px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-
     <header class="page-header">
-        <h1>Our Journeys</h1>
-        <a href="index.html">Back to Home</a>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <div class="header-container">
+            <a href="index.html" class="logo">Bruma Visual</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="workshop.html">The Workshop</a></li>
+                    <li><a href="contact.html" class="button">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle">&#9776;</button>
+        </div>
     </header>
 
     <main id="main-content">
         <section class="content-section">
             <h2>Explore Our Expeditions</h2>
             <p>This page will feature an interactive map showcasing all our past and ongoing expeditions. Click on a pin to learn more about each journey!</p>
-            <!-- Placeholder for interactive map -->
-            <div class="interactive-map-placeholder" style="height: 500px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #666;">
+            <div class="interactive-map-placeholder">
                 Interactive Map Placeholder
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Bruma Visual</p>
+        <p>&copy; 2025 Bruma Visual.</p>
+        <div class="social-links">
+            <a href="#">IG</a>
+            <a href="#">YT</a>
+        </div>
     </footer>
-
 </body>
 </html>
