@@ -1,33 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruma Visual - Contact</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Bruma Visual - Contacto</title>
+    <!-- Google Fonts: Montserrat & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-page-title="Contact Me" data-back-link="index.html" data-back-text="Back to Home">
-
-    <header class="page-header">
+<body>
+    <header class="sticky-header">
+        <!-- Begin header content -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <div class="header-container">
+            <a href="index.html" class="logo">Bruma Visual</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="button">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle">&#9776;</button>
+        </div>
+        <!-- End header content -->
     </header>
-    <main id="main-content">
-        <section class="content-section">
-            <h2>Get in Touch</h2>
-            <p>Have a project in mind? Want to collaborate on an adventure? Or just want to say hello? I'd love to hear from you!</p>
-            <p>You can reach me via email at: <a href="mailto:info@bernardogalindo.com">info@bernardogalindo.com</a></p>
-            <p>Alternatively, you can connect with me on social media:</p>
-            <div class="social-links">
-                <a href="#">Instagram</a>
-                <a href="#">YouTube</a>
-            </div>
+
+    <main class="site-content" id="main-content">
+        <section class="contact-hero-section">
+            <h1>Hablemos.</h1>
+            <p class="contact-subtitle">Convirtamos tus ideas en proyectos visuales impactantes y soluciones basadas en datos.</p>
         </section>
+
+        <div class="contact-main-container">
+            <div class="contact-left-column">
+                <h3>Un Enfoque Diferente.</h3>
+                <p>
+                    Mi trabajo se encuentra en la intersección de la ingeniería ambiental y la narrativa digital. Como Supervisor Ambiental con una pasión por la tecnología, no solo gestiono proyectos, sino que los visualizo. Utilizo drones para capturar perspectivas únicas, la fotogrametría para modelar la realidad y la ciencia de datos para descubrir patrones que otros no ven.
+                </p>
+                <p>
+                    Si buscas un profesional que combine el rigor técnico con una visión creativa, estás en el lugar correcto.
+                </p>
+                <div class="cv-links-block">
+                    <h4>Conoce mi Perfil Completo</h4>
+                    <p>Explora mi experiencia y certificaciones en detalle.</p>
+                    <a href="https://cv.bernardogalindo.com" target="_blank" class="btn">Ver CV Interactivo</a>
+                    <a href="URL-A-TU-CV-EN-PDF.pdf" download class="btn-secondary">Descargar PDF</a>
+                </div>
+            </div>
+            <div class="contact-right-column">
+                <h3>Inicia la Conversación</h3>
+                <form id="contact-form" class="contact-form-stacked" action="#">
+                    <div class="form-group">
+                        <label for="contact-name">Tu Nombre</label>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Tu Correo Electrónico</label>
+                        <input type="email" id="contact-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Asunto</label>
+                        <input type="text" id="contact-subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">¿Cómo puedo ayudarte?</label>
+                        <textarea id="contact-message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
     </main>
 
-    <footer></footer>
+    <footer>
+        <!-- Begin footer content -->
+        <p>&copy; 2025 Bruma Visual.</p>
+        <div class="social-links">
+            <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <!-- End footer content -->
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
