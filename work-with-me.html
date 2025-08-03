@@ -1,30 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruma Visual - Work With Me</title>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Fonts: Montserrat & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Your Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-page-title="Work With Me" data-back-link="index.html" data-back-text="Back to Home">
-
-    <header class="page-header">
+<body>
+    <!-- Header -->
+    <header class="sticky-header">
+        <!-- Begin header content -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <div class="header-container">
+            <a href="index.html" class="logo">Bruma Visual</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="button">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle">&#9776;</button>
+        </div>
+        <!-- End header content -->
     </header>
-    <main id="main-content">
+
+    <!-- Main Content Wrapper -->
+    <main class="site-content" id="main-content">
         <section class="work-with-me-section">
             <h2>Seeking Collaborations</h2>
             <p>Bruma Visual is built on the spirit of exploration and partnership. I am always looking for new opportunities to collaborate with brands, businesses, and individuals who share a passion for authentic storytelling and breathtaking visuals.</p>
             <p>If you have a project, an idea, or an adventure in mind, I would love to hear from you. Let's create something unforgettable together.</p>
             <a href="https://cv.bernardogalindo.com/bg.html" class="cta-button" target="_blank">View My CV & Contact Info</a>
         </section>
-    </main>
+    </main> <!-- End of Site Content Wrapper -->
 
-    <footer></footer>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-widgets-inner-wrap">
+            <div class="bruma-footer-container">
+                <div class="footer-availability">
+                    <p>Currently available for freelance work.<br>Always happy to chat.</p>
+                </div>
+                <div class="footer-contact-link">
+                    <a href="mailto:hello@bernardogalindo.com">
+                        hello<span class="email-at-symbol">@</span>bernardogalindo.com
+                    </a>
+                </div>
+                <form class="footer-newsletter-box" action="#" method="post" autocomplete="off">
+                    <div class="newsletter-content">
+                        <div class="newsletter-title">
+                            <div class="newsletter-icon-container">
+                                <i class="fa fa-paper-plane"></i>
+                            </div>
+                            <div class="newsletter-text">
+                                <span>Join the Adventure</span>
+                                <small class="newsletter-tagline">Get exclusive stories & updates</small>
+                            </div>
+                        </div>
+                        <div class="newsletter-fields">
+                            <input type="email" name="newsletter-email" placeholder="Your email address" required>
+                            <button type="submit" class="newsletter-btn">
+                                <span>Subscribe</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="footer-meta">
+                    <span>Location - Quito, Ecuador</span>
+                    <button id="back-to-top" class="back-to-top-btn" title="Volver arriba">
+                        <i class="fa fa-arrow-up"></i>
+                        <span>Back to Top</span>
+                    </button>
+                    <span id="local-time"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script>
+    // Back to Top functionality
+    document.getElementById('back-to-top').addEventListener('click', function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    // Local time display (Ecuador)
+    function updateTime() {
+        const timeElement = document.getElementById('local-time');
+        if (timeElement) {
+            const options = { timeZone: 'America/Guayaquil', hour: 'numeric', minute: '2-digit', hour12: true };
+            const formatter = new Intl.DateTimeFormat('es-EC', options);
+            const localTime = formatter.format(new Date());
+            timeElement.textContent = `Local Time - ${localTime}`;
+        }
+    }
+    updateTime();
+    setInterval(updateTime, 30000);
+    </script>
 </body>
 </html>
