@@ -43,16 +43,53 @@
         </section>
     </main> <!-- End of Site Content Wrapper -->
 
+    <!-- Footer -->
     <footer>
-        <!-- Begin footer content -->
-        <p>&copy; 2025 Bruma Visual.</p>
-        <div class="social-links">
-            <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <div class="footer-widgets-inner-wrap">
+            <div class="bruma-footer-container">
+                <div class="footer-availability">
+                    <p>Currently available for freelance work.<br>Always happy to chat.</p>
+                </div>
+                <div class="footer-contact-link">
+                    <a href="mailto:hello@bernardogalindo.com">
+                        hello<span class="email-at-symbol">@</span>bernardogalindo.com
+                    </a>
+                </div>
+                <form class="footer-newsletter-box" action="#" method="post" autocomplete="off">
+                    <!-- ...existing code... -->
+                </form>
+                <div class="footer-meta">
+                    <span>Location - Quito, Ecuador</span>
+                    <button id="back-to-top" class="back-to-top-btn" title="Volver arriba">
+                        <i class="fa fa-arrow-up"></i>
+                        <span>Back to Top</span>
+                    </button>
+                    <span id="local-time"></span>
+                </div>
+            </div>
         </div>
-        <!-- End footer content -->
     </footer>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script>
+    // Back to Top functionality
+    document.getElementById('back-to-top').addEventListener('click', function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    // Local time display (Ecuador)
+    function updateTime() {
+        const timeElement = document.getElementById('local-time');
+        if (timeElement) {
+            const options = { timeZone: 'America/Guayaquil', hour: 'numeric', minute: '2-digit', hour12: true };
+            const formatter = new Intl.DateTimeFormat('es-EC', options);
+            const localTime = formatter.format(new Date());
+            timeElement.textContent = `Local Time - ${localTime}`;
+        }
+    }
+    updateTime();
+    setInterval(updateTime, 30000);
+    </script>
 </body>
 </html>
