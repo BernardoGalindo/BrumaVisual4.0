@@ -99,18 +99,61 @@
     </main> <!-- End of Site Content Wrapper -->
 
     <footer>
-        <!-- Begin footer content -->
-        <p>&copy; 2025 Bruma Visual.</p>
-        <div class="social-links">
-            <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-columns">
+            <div class="footer-newsletter">
+                <form class="newsletter-form" action="#" method="post" autocomplete="off">
+                    <div class="newsletter-title">
+                        <i class="fa fa-paper-plane"></i>
+                        <span>Suscríbete al newsletter</span>
+                    </div>
+                    <div class="newsletter-fields">
+                        <input type="email" name="newsletter-email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="newsletter-btn"><i class="fa fa-arrow-right"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-contact-social">
+                <a href="mailto:hello@bernardogalindo.com" class="footer-email">
+                    <i class="fa fa-envelope"></i> hello@bernardogalindo.com
+                </a>
+                <div class="footer-social">
+                    <a href="https://instagram.com/" target="_blank" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/" target="_blank" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com/" target="_blank" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
-        <!-- End footer content -->
+        <div class="footer-bottom-row">
+            <button id="back-to-top" class="back-to-top-btn" title="Volver arriba">
+                <i class="fa fa-arrow-up"></i>
+                <span>Volver arriba</span>
+            </button>
+            <span class="footer-local-hour" id="footer-local-hour"></span>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2025 Bernardo Galindo. Todos los derechos reservados.
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    // Back to Top functionality
+    document.getElementById('back-to-top').addEventListener('click', function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    // Local hour display (Colombia time, adjust as needed)
+    function updateLocalHour() {
+        const now = new Date();
+        // Colombia time zone: UTC-5
+        const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'America/Bogota' };
+        const timeString = now.toLocaleTimeString('es-CO', options);
+        document.getElementById('footer-local-hour').textContent = `Hora local: ${timeString}`;
+    }
+    updateLocalHour();
+    setInterval(updateLocalHour, 1000);
+    </script>
 
 </body>
 </html>
