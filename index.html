@@ -132,10 +132,9 @@
             <span class="footer-local-hour" id="footer-local-hour"></span>
         </div>
         <div class="footer-copyright">
-            &copy; 2025 Bernardo Galindo. Todos los derechos reservados.
+            © 2025 Bernardo Galindo. Todos los derechos reservados.
         </div>
     </footer>
-
     <script src="js/main.js"></script>
     <script>
     // Back to Top functionality
@@ -143,13 +142,14 @@
         window.scrollTo({top: 0, behavior: 'smooth'});
     });
 
-    // Local hour display (Colombia time, adjust as needed)
+    // Local hour display (Ecuador time zone)
     function updateLocalHour() {
-        const now = new Date();
-        // Colombia time zone: UTC-5
-        const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'America/Bogota' };
-        const timeString = now.toLocaleTimeString('es-CO', options);
-        document.getElementById('footer-local-hour').textContent = `Hora local: ${timeString}`;
+        const timeElement = document.getElementById('footer-local-hour');
+        if (timeElement) {
+            const options = { hour: 'numeric', minute: '2-digit', second: '2-digit', timeZone: 'America/Guayaquil' };
+            const timeString = new Date().toLocaleTimeString('es-EC', options);
+            timeElement.textContent = `Hora local: ${timeString}`;
+        }
     }
     updateLocalHour();
     setInterval(updateLocalHour, 1000);
